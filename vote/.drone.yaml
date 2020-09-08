@@ -9,10 +9,12 @@ steps:
   settings:
     auto_tag: true
     dry_run: true
-    dockerfile: Dockerfile
+    dockerfile: vote/Dockerfile
     repo: dhavlev
     registry: registry.hub.docker.com
     username:
       from_secret: docker_username
     password:
       from_secret: docker_password
+
+

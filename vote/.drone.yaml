@@ -17,6 +17,8 @@ steps:
     dockerfile: vote/Dockerfile
     repo: dhavlev
     registry: registry.hub.docker.com
+    build_args:
+      - --network=host
     username:
       from_secret: docker_username
     password:

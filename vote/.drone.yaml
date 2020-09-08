@@ -11,6 +11,7 @@ steps:
     dry_run: true
     no_cache: true
     debug: true
+    insecure: true
     context: vote
     dockerfile: vote/Dockerfile
     repo: dhavlev

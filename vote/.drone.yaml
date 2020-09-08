@@ -9,6 +9,7 @@ steps:
   settings:
     auto_tag: true
     dry_run: true
+    context: vote
     dockerfile: vote/Dockerfile
     repo: dhavlev
     registry: registry.hub.docker.com

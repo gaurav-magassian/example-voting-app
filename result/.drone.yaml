@@ -6,6 +6,9 @@ name: CI
 steps:
 - name: Build and Push Image
   image: plugins/docker
+  volumes:
+  - name: docker
+    path: /var/lib/docker
   settings:
     auto_tag: true
     dry_run: true

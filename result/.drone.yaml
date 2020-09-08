@@ -11,11 +11,8 @@ steps:
     path: /var/lib/docker
   settings:
     auto_tag: true
-    dry_run: true
-    no_cache: true
     debug: true
     context: result
-    ipv6: false
     dockerfile: result/Dockerfile
     repo: dhavlev
     registry: registry.hub.docker.com

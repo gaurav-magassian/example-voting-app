@@ -10,6 +10,7 @@ steps:
     repo: dhavlev
     tags: ${DRONE_COMMIT_SHA}
     cache: true
+    dockerfile: result/Dockerfile
     skip_tls_verify: true # set to true for testing registries ONLY with self-signed certs
     build_args:
     - COMMIT_SHA=${DRONE_COMMIT_SHA}

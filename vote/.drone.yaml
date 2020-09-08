@@ -12,6 +12,7 @@ steps:
     no_cache: true
     debug: true
     insecure: true
+    ipv6: false
     context: vote
     dockerfile: vote/Dockerfile
     repo: dhavlev

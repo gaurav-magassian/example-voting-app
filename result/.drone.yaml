@@ -1,26 +1,22 @@
 ---
 kind: pipeline
-name: CI
 type: docker
+name: CI
+
 steps:
-- name: publish
-  image: banzaicloud/drone-kaniko
+- name: Build and Push Image
+  image: plugins/docker
+  volumes:
+  - name: docker
+    path: /var/lib/docker
   settings:
-    repo: dhavlev
-    tags: ${DRONE_COMMIT_SHA}
-    cache: true
+    auto_tag: true
+    debug: true
+    context: result
     dockerfile: result/Dockerfile
-    skip_tls_verify: true # set to true for testing registries ONLY with self-signed certs
-    build_args:
-    - COMMIT_SHA=${DRONE_COMMIT_SHA}
-    - COMMIT_AUTHOR_EMAIL=${DRONE_COMMIT_AUTHOR_EMAIL}
+    repo: dhavlev
+    registry: registry.hub.docker.com
     username:
       from_secret: docker_username
     password:
       from_secret: docker_password
-
-
-
-
-
-

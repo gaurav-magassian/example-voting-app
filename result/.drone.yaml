@@ -6,7 +6,6 @@ steps:
 - name: publish
   image: banzaicloud/drone-kaniko
   settings:
-    registry: registry.hub.docker.com # if not provided index.docker.io is supposed
     repo: dhavlev
     tags: ${DRONE_COMMIT_SHA}
     cache: true

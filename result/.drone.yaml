@@ -11,10 +11,8 @@ steps:
     dry_run: true
     no_cache: true
     debug: true
-    insecure: true
-    ipv6: false
-    context: vote
-    dockerfile: vote/Dockerfile
+    context: result
+    dockerfile: result/Dockerfile
     repo: dhavlev
     registry: registry.hub.docker.com
     username:

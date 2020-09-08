@@ -12,6 +12,7 @@ steps:
     no_cache: true
     debug: true
     context: result
+    ipv6: false
     dockerfile: result/Dockerfile
     repo: dhavlev
     registry: registry.hub.docker.com
